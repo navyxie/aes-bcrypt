@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "navyxie"
+  },
+  "bugs": {
+    "url": "https://github.com/navyxie/aes-bcrypt/issues"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6"
+  },
+  "description": "SDK",
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  },
+  "homepage": "https://github.com/navyxie/aes-bcrypt",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "navyxie",
+      "email": "navyxie2010@gmail.com"
+    }
+  ],
+  "name": "aes-bcrypt",
+  "optionalDependencies": {},
+  "scripts": {
+    "cov": "npm install && ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --recursive test/**/* --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "npm install && ./node_modules/mocha/bin/_mocha test.js"
+  },
+  "version": "0.0.1"
+}
