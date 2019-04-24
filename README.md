@@ -80,7 +80,7 @@ const info = AESBCRYPT.idCardInfo('身份证号码')
 	// address: '广东省湛江市雷州市',
 	// age:24,
     // constellation:'水瓶'//星座 
-    }
+// }
 ```
 
 ### getIdcardAscription
