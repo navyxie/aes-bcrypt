@@ -41,3 +41,36 @@ describe('checkCode', function () {
         data.should.be.equal('148bab67775fa7e0677215fb73f7aee7');
     })
 })
+describe('idCardInfo', function () {
+    it('#7 idCardInfo ok', function() {
+        this.timeout(6000);
+        var data = lib.idCardInfo('513436200004126215');
+        data.gender.should.be.equal('M');
+        data.age.should.be.aboveOrEqual(19);
+    })
+})
+describe('getIdcardAscription', function () {
+    it('#8 getIdcardAscription ok', function() {
+        this.timeout(6000);
+        var data = lib.getIdcardAscription('513436200004126215');
+        data.should.be.equal('513436');
+        var data2 = lib.getIdcardAscription('110221199408764212');
+        data2.should.be.equal('110114');
+    })
+})
+describe('getPhoneAscription', function () {
+    it('#9 getPhoneAscription ok', function() {
+        this.timeout(6000);
+        var data = lib.getPhoneAscription('13800138000');
+        data.should.be.equal('110100');
+    })
+})
+describe('getCompanyAscription', function () {
+    it('#10 getCompanyAscription ok', function() {
+        this.timeout(6000);
+        var data = lib.getCompanyAscription('510109000525857');
+        data.should.be.equal('5101090');
+        var data2 = lib.getCompanyAscription('92510100MA61WJ3204');
+        data2.should.be.equal('510100');
+    })
+})
