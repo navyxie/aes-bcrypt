@@ -14,7 +14,12 @@ const hash = AESBCRYPT.idCardHash('idcard or name', 'aes key(string length must 
 ```javascript
 // 生成手机号 Hash 值和盐值
 const AESBCRYPT = require('aes-bcrypt');
+// 同步方法
 const phoneData = AESBCRYPT.phoneHash('idcard or name', 'aes key(string length must be 16)')
+// 异步方法
+AESBCRYPT.phoneHash('idcard or name', 'aes key(string length must be 16)').then(function(phoneData){
+	console.log(phoneData)
+})
 // phoneData => {salt: '$2a$12$t/OvASEQwGT.XPc89oOdLe', hash: '$2a$12$uTasXyBru23f5RA4cXbACeGgZvYXX59D5jw0FrsmjF5QBzeXmLT7y'}
 ```
 

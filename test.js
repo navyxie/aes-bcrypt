@@ -74,3 +74,13 @@ describe('getCompanyAscription', function () {
         data2.should.be.equal('510100');
     })
 })
+
+describe('phoneHash Async', function () {
+    it('#3 phoneHash ok', function(done) {
+        this.timeout(6000);
+        lib.phoneHash('13800138000', true).then(function(data){
+            data.should.match(/^\$2a\$12\$/);
+            done();
+        })
+    })
+})
