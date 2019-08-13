@@ -31,5 +31,5 @@
   "scripts": {
     "test": "npm install && ./node_modules/mocha/bin/_mocha test.js"
   },
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
