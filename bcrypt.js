@@ -2,7 +2,7 @@ var crypto = require('crypto');
 var bcrypt = require('bcrypt');
 var Promise = require('bluebird');
 function phoneHash(phone, async) {
-    var saltRounds = 12;
+    var saltRounds = 10;
     var minor = 'a';
     if (async) {
         return phoneHashASync(saltRounds, minor)
