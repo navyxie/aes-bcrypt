@@ -10,7 +10,7 @@ function phoneHash(phone, async) {
     return phoneHashSync(saltRounds, minor)
     function phoneHashSync (saltRounds, minor) {
         var salt = bcrypt.genSaltSync(saltRounds, minor)
-        var hashstr = crypto.createHash('sha256').update(phone + salt, 'utf-8').digest('base64');
+        var hashstr = crypto.createHash('sha256').update(phone + salt, 'utf-8').digest('hex');
         var buff = new Buffer(hashstr);
         var phoneBase64 = buff.toString('base64');
         var salt2 = bcrypt.genSaltSync(saltRounds, minor);
