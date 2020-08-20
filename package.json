@@ -6,7 +6,7 @@
     "url": "https://github.com/navyxie/aes-bcrypt/issues"
   },
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bluebird": "^3.5.4",
     "idcard": "^4.1.0",
     "lodash": "^4.17.11"
